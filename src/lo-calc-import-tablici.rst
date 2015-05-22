@@ -33,20 +33,30 @@ LibreOffice поддерживает импорт html документов. Я 
        :width: 450 px
        :align: center
        :alt:  
-       
+
+|/center|
+    
 Открыл LibreOffice Calc и выполнил *«Файл → Открыть»* (``Ctrl + O``). В окне выбора файлов выбрал сохраненную страницу, она имеет расширение «``.html``». С помощью выпадающего меню можно отфильтровать файлы по расширению.
+
+|center|
 
 .. figure:: img/lo-calc/lo-calc-import-tablici-002.png
        :width: 450 px
        :align: center
        :alt:  
 
+|/center|
+
 Импорт был благополучно совершен.
+
+|center|
 
 .. figure:: img/lo-calc/lo-calc-import-tablici-003.png
        :width: 450 px
        :align: center
        :alt:  
+  
+|/center|       
 
 Теперь я могу пользоваться всеми преимуществами LibreOffice.
 
