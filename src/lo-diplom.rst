@@ -7,7 +7,7 @@
 
 Была добавлена глава «*Шаблон оформления конструкторской документации (ГОСТ ЕСКД — рамки А4)*», этот вопрос очень часто задается пользователями.
 
-И самое главное новшество заключается в использовании при верстке пособия связки ``reStructuredText``, ``Python-Sphinx``, ``Git``, ``GitHub``, ``Read the Docs``. Благодаря этому, руководство теперь доступно в четырех форматах — `онлайн <http://libreoffice-diplom.readthedocs.org/>`_, `HTML <https://readthedocs.org/projects/libreoffice-diplom/downloads/htmlzip/latest/>_`, `PDF <https://readthedocs.org/projects/libreoffice-diplom/downloads/pdf/latest/_>`, `ePub <https://readthedocs.org/projects/libreoffice-diplom/downloads/epub/latest/>_`.
+И самое главное новшество заключается в использовании при верстке пособия связки ``reStructuredText``, ``Python-Sphinx``, ``Git``, ``GitHub``, ``Read the Docs``. Благодаря этому, руководство теперь доступно в четырех форматах — `онлайн <http://libreoffice-diplom.readthedocs.org/>`_, `HTML <https://readthedocs.org/projects/libreoffice-diplom/downloads/htmlzip/latest/>`_, `PDF <https://readthedocs.org/projects/libreoffice-diplom/downloads/pdf/latest/>`_, `ePub <https://readthedocs.org/projects/libreoffice-diplom/downloads/epub/latest/>`_.
 
 Не забываем про возможности сервиса Read the Docs:
 
@@ -21,7 +21,7 @@
 
 |center|
 
-.. figure:: /home/dmitry/Docs/LibreRussia/librerussia.github.io/img/lo-diplom/rtd-screen-001.png
+.. figure:: img/lo-diplom/rtd-screen-001.png
        :width: 450 px
        :align: center
        :alt:  
