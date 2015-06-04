@@ -1,5 +1,5 @@
 :title: Скрипт для замены служебных символов в XML
-:date: 05.06.2015 00:20:04
+:date: 2015-06-05 00:20
 :category: Python
 :tags: Скрипты, Python, XML, RegExp
 
