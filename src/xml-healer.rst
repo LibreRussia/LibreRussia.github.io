@@ -90,7 +90,7 @@
 
 Чтобы проверить и сравнить изменения в XML файлах, необходимо воспользоваться программой `WinMerge <http://winmerge.org/about/?lang=ru>`_.
 
-.. figure:: img-xml-healer/xml_healer_screen-007.jpg
+.. figure:: img/img-xml-healer/xml_healer_screen-007.jpg
    :width: 500 px
    :align: center
    :alt: WinMerge — программа для сравнения текстовых файлов
@@ -112,35 +112,35 @@
 
 Процесс работы скрипта ``xml_healer.py`` со скриншотами:
 
-.. figure:: img-xml-healer/xml_healer_screen-004.jpg
+.. figure:: img/img-xml-healer/xml_healer_screen-004.jpg
    :width: 400 px
    :align: center
    :alt: Шаг 0 — Прогон файла через Tester 
 
    Шаг 0 — Прогон файла через Tester 
 
-.. figure:: img-xml-healer/xml_healer_screen-001.png
+.. figure:: img/img-xml-healer/xml_healer_screen-001.png
    :width: 400 px
    :align: center
    :alt: Шаг 1 — Поместить скрипт с файлами для обработки
    
    Шаг 1 — Поместить скрипт с файлами для обработки и дойным нажатием запустить скрипт.
    
-.. figure:: img-xml-healer/xml_healer_screen-002.png
+.. figure:: img/img-xml-healer/xml_healer_screen-002.png
    :width: 400 px
    :align: center
    :alt: Шаг 2 — Во время работы скрипта откроется окно командной строки, в котором будет выведен результат обработки файлов.
    
    Шаг 2 — Во время работы скрипта откроется окно командной строки, в котором будет выведен результат обработки файлов.
    
-.. figure:: img-xml-healer/xml_healer_screen-003.png
+.. figure:: img/img-xml-healer/xml_healer_screen-003.png
    :width: 400 px
    :align: center
    :alt: Шаг 3 — Обработанные файлы будут находиться в папке out
    
    Шаг 3 — Обработанные файлы будут находиться в папке ``out``.
    
-.. figure:: img-xml-healer/xml_healer_screen-005.jpg
+.. figure:: img/img-xml-healer/xml_healer_screen-005.jpg
    :width: 200 px
    :align: center
    :alt: Шаг 4 — Повторный прогон исправленного файла через Tester
