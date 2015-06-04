@@ -1,6 +1,6 @@
 :title: LibreOffice Writer Функция «Автотекст»
 :date: 23.05.2014 14:00:00
-:category: LibreOffice Writer
+:category: LibreOffice
 :tags: Руководства, LibreOffice, Writer
 
 

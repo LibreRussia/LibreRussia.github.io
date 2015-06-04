@@ -1,18 +1,18 @@
 :title: Конвертация reStructuredText в Markdown и наоборот
 :date: 04.06.2015 03:25:37
-:category: 
+:category: Разметка
 :tags: reStructuredText, Markdown, pandoc
 
 
 Конвертация Markdown в reStructuredText:
 
-.. code-block:: python
+.. code-block:: bash
 
     pandoc --from=markdown --to=rst --output=README.rst README.md
 
 Конвертация reStructuredText в Markdown:
 
-.. code-block:: python
+.. code-block:: bash
 
     pandoc --from=rst --to=markdown --output=README.md README.rst
     
