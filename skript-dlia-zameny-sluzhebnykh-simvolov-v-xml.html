@@ -2,9 +2,12 @@
 <html lang="">	
 <head>
 	<meta charset="utf-8"/>
-	<title>Блог про LibreOffice</title>	
+	<title>Скрипт для замены служебных символов в XML - Блог про LibreOffice</title>	
 	<meta name="author" content="Dmitry Mazhartsev">
 	
+
+	<meta name="description" content="Оглавление Описание Системные требования Авторские права Обратная связь Порядок работы Выводимая информация Рекомендации Проверка изменений в файлах Программное обеспечение Приложение Описание xml_healer.py (англ. healer — целитель) — скрипт для массового исправления невалидных XML файлов. Скрипт выполняет следующие замены: Символ & заменяется на &amp;; Символ < заменяется на '&lt;; Символ > заменяется на &gt; Символы ...">
+
 
 	<link rel="top" href="#" /><link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,300italic,400italic,600italic|Source+Code+Pro' rel='stylesheet' type='text/css'></link>
 	<link rel="stylesheet" href="/theme/css/main.css" type="text/css" />
@@ -25,12 +28,18 @@
 	  <div class="wrapper">
 
 		  <div role="main" class="content">
-
-
-
-      <article>
-        <h1><a href="/skript-dlia-zameny-sluzhebnykh-simvolov-v-xml.html">Скрипт для замены служебных символов в XML</a></h1>
-        <div class="contents topic" id="id1">
+	<article class="full">
+			
+		<h1>Скрипт для замены служебных символов в XML</h1>
+		
+<div class="metadata">
+  <time datetime="2015-05-06T00:20:04+02:00" pubdate>Ср. 06 Май 2015</time>
+    <address class="vcard author">
+      by <a class="url fn" href="/author/dmitry-mazhartsev.html">Dmitry Mazhartsev</a>
+    </address>
+  in <a href="/category/skripty-python.html">Скрипты, Python</a>
+<p class="tags">tagged <a href="/tag/skripty.html">Скрипты</a>, <a href="/tag/python.html">Python</a>, <a href="/tag/xml.html">XML</a>, <a href="/tag/regexp.html">RegExp</a></p></div>		
+		<div class="contents topic" id="id1">
 <p class="topic-title first">Оглавление</p>
 <ul class="simple">
 <li><a class="reference internal" href="#id2" id="id15">Описание</a><ul>
@@ -158,43 +167,15 @@
 <img alt="Шаг 4 — Повторный прогон исправленного файла через Tester" src="img-xml-healer/xml_healer_screen-005.jpg" style="width: 200px;" />
 </div>
 </div>
+	
 
-      </article>
+	</article>
 
-      <hr />
+    <p>
+	<a href="https://twitter.com/share" class="twitter-share-button" data-via="" data-lang="en" data-size="large" data-related="">Tweet</a>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	</p>
 
-        <div>
-          <h3>Last posts</h3>
-          <ol class="archive">
-    
-
-
-      <li>
-<a href="/konvertatsiia-restructuredtext-v-markdown-i-naoborot.html" rel="bookmark" title="Permalink to Конвертация reStructuredText в Markdown и наоборот">Конвертация reStructuredText в Markdown и наоборот</a>
-  <time datetime="2015-04-06T03:25:37+02:00" pubdate>Пн. 06 Апрель 2015</time>
-<p class="tags">tags: <a href="/tag/restructuredtext.html">reStructuredText</a><a href="/tag/markdown.html">Markdown</a><a href="/tag/pandoc.html">pandoc</a></p></a>      </li>
-
-
-      <li>
-<a href="/libreoffice-calc-import-tablitsy-s-saita.html" rel="bookmark" title="Permalink to LibreOffice Calc: Импорт таблицы с сайта">LibreOffice Calc: Импорт таблицы с сайта</a>
-  <time datetime="2014-09-27T11:00:00+02:00" pubdate>Сб. 27 Сентябрь 2014</time>
-<p class="tags">tags: <a href="/tag/libreoffice.html">LibreOffice</a><a href="/tag/calc.html">Calc</a></p></a>      </li>
-
-
-      <li>
-<a href="/posobie-oformlenie-diplomnoi-raboty-v-libreoffice-3-izdanie.html" rel="bookmark" title="Permalink to Пособие: Оформление дипломной работы в LibreOffice (3-издание)">Пособие: Оформление дипломной работы в LibreOffice (3-издание)</a>
-  <time datetime="2014-08-12T21:00:00+02:00" pubdate>Вт. 12 Август 2014</time>
-<p class="tags">tags: <a href="/tag/rukovodstva.html">Руководства</a><a href="/tag/libreoffice.html">LibreOffice</a><a href="/tag/diplom.html">Диплом</a><a href="/tag/dokumentatsiia.html">Документация</a></p></a>      </li>
-
-
-      <li>
-<a href="/libreoffice-writer-funktsiia-avtotekst.html" rel="bookmark" title="Permalink to LibreOffice Writer Функция «Автотекст»">LibreOffice Writer Функция «Автотекст»</a>
-  <time datetime="2014-05-23T14:00:00+02:00" pubdate>Пт. 23 Май 2014</time>
-<p class="tags">tags: <a href="/tag/rukovodstva.html">Руководства</a><a href="/tag/libreoffice.html">LibreOffice</a><a href="/tag/writer.html">Writer</a></p></a>      </li>
-
-
-          </ol>
-        </div>
 
 		  </div>	
 		  
@@ -203,11 +184,11 @@
 	        <nav>
 	          <h2>Категории</h2>
 	          <ul>
-	              <li class="active"><a href="/category/.html"></a></li>
+	              <li ><a href="/category/.html"></a></li>
 	              <li ><a href="/category/calc.html">Calc</a></li>
 	              <li ><a href="/category/libreoffice-writer.html">LibreOffice Writer</a></li>
 	              <li ><a href="/category/rukovodstva.html">Руководства</a></li>
-	              <li ><a href="/category/skripty-python.html">Скрипты, Python</a></li>
+	              <li class="active"><a href="/category/skripty-python.html">Скрипты, Python</a></li>
 	          </ul>
 	        </nav>
 
