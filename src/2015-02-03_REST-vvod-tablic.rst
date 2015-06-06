@@ -1,7 +1,7 @@
 :title: reStructuredText (ReST): Быстрый способ ввода таблиц
 :date: 2015-02-03
 :category: Разметка
-:tags: reStructuredText, markdown, pandoc, html, docutils
+:tags: reStructuredText, markdown, pandoc, html, docutils, LibreOffice
 
 
 Когда дело касается больших таблиц, то их не очень удобно набирать
