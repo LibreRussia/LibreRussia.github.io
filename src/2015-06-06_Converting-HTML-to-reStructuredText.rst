@@ -17,8 +17,7 @@
     pandoc --from=rst --to=html --output=README.html README.rst
 
 
-Автоматизация с помощью Python
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**Автоматизация с помощью Python**
 
 .. code-block:: python
 

@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="">	
+<head>
+	<meta charset="utf-8"/>
+	<title>LibreOffice Math: Выравнивание многострочных выражений (формул) Impress - Блог про LibreOffice</title>	
+	<meta name="author" content="Dmitry Mazhartsev">
+	
+
+	<meta name="description" content="Казалось, что тема с Math исчерпана полностью. Но все же нашелся один неучтенный момент. По умолчанию выражения в многострочных формулах выравниваются по центру. В русскоязычной литературе принято выравнивать выражения по левому краю. Делается это с помощью команды alignl. Все хорошо, но вот загвоздка: left lbrace alignl stack { x = 9 - y ...">
+
+
+	<link rel="top" href="#" /><link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,300italic,400italic,600italic|Source+Code+Pro' rel='stylesheet' type='text/css'></link>
+	<link rel="stylesheet" href="/theme/css/main.css" type="text/css" />
+		
+
+</head>
+	
+<body>
+
+    <div class="container">
+	  
+	  <header role="banner">
+	    <div class="feeds">
+	    </div>
+		<a href="" class="title">Блог про LibreOffice</a>
+      </header>
+	
+	  <div class="wrapper">
+
+		  <div role="main" class="content">
+	<article class="full">
+			
+		<h1>LibreOffice Math: Выравнивание многострочных выражений (формул) Impress</h1>
+		
+<div class="metadata">
+  <time datetime="2015-02-05T00:00:00+01:00" pubdate>Чт. 05 Февраль 2015</time>
+    <address class="vcard author">
+      by <a class="url fn" href="/author/dmitry-mazhartsev.html">Dmitry Mazhartsev</a>
+    </address>
+  in <a href="/category/libreoffice.html">LibreOffice</a>
+<p class="tags">tagged <a href="/tag/rukovodstva.html">Руководства</a>, <a href="/tag/libreoffice.html">LibreOffice</a>, <a href="/tag/math.html">Math</a></p></div>		
+		<p>Казалось, что тема с Math исчерпана полностью. Но все же нашелся один
+неучтенный момент.</p>
+<p>По умолчанию выражения в многострочных формулах выравниваются по центру.
+В русскоязычной литературе принято выравнивать выражения по левому краю.
+Делается это с помощью команды <tt class="docutils literal">alignl</tt>. Все хорошо, но вот загвоздка:</p>
+<pre class="literal-block">
+left lbrace alignl
+stack  {
+x = 9 - y
+#
+2  over   {9-y} - 2 over y = {x-1} over 10
+} right none
+</pre>
+<div class="figure align-center">
+<img alt="" src="/home/dmitry/Docs/LibreRussia/librerussia.github.io/img/2015-02-05_lo-math-align/2015-02-05_lo-math-align-001.png" style="width: 300px;" />
+</div>
+<p>Во второй строке, абсолютно все выражения тоже выравниваются по левому
+краю, в том числе знаменатели и числители дробей. Что некрасиво.</p>
+<p>Самым первым в голову приходит то, что нужном ставить команду
+выравнивания для каждого выражения в отдельности. Но на деле, можно
+обойтись всего одной дополнительной командой <tt class="docutils literal">alignc</tt>.</p>
+<pre class="literal-block">
+left lbrace alignl
+stack  {
+x = 9 - y
+#
+alignc {2  over   {9-y} - 2 over y = {x-1} over 10}
+} right none
+</pre>
+<div class="figure align-center">
+<img alt="" src="/home/dmitry/Docs/LibreRussia/librerussia.github.io/img/2015-02-05_lo-math-align/2015-02-05_lo-math-align-002.png" style="width: 300px;" />
+</div>
+<p>Обратите внимание, я взял в фигурные скобки (имеются ввиду служебные
+символы) всю вторую строку и добавил перед ней команду <tt class="docutils literal">alignc</tt>.</p>
+<div class="section" id="id1">
+<h2>Дополнительно</h2>
+<p>На данный момент компонент Math обладает самой полной русскоязычной
+документацией, в отличии от других компонентов (это временно).
+Напоминаю, по Math есть целых два руководства:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://libreoffice.readthedocs.org/ru/latest/math.html">Краткое руководство по LibreOffice
+Math</a>
+(официальное)</li>
+<li><a class="reference external" href="http://librerussia.blogspot.ru/2014/10/libreoffice-math.html">Руководство по LibreOffice
+Math</a>
+(авторское)</li>
+</ul>
+<p>Читать рекомендую оба. В кратком официальном руководстве более детально
+рассматриваются основы работы с Math и есть несколько примеров ввода
+формул, которых нет в авторском руководстве. Авторское руководство
+содержит больше примеров и рассматривает некоторые вопросы более
+подробно.</p>
+<p>Пока руки не доходят объединить весь материал в единое полное
+руководство. Но, думаю, что после завершения работы над <a class="reference external" href="http://libreoffice.readthedocs.org">Кратким
+руководством по LibreOffice</a>
+возьмусь за это дело.</p>
+<div class="section" id="id2">
+<h3>Статьи</h3>
+<ul class="simple">
+<li><a class="reference external" href="http://librerussia.blogspot.ru/2014/11/libreoffice-math_19.html">LibreOffice Math: Каталог. Создание нестандартного набора
+символов</a></li>
+<li><a class="reference external" href="http://librerussia.blogspot.ru/2014/11/libreoffice-math_96.html">Как поставить дополнительный пробел? (Пробелы и
+табуляция)</a></li>
+<li><a class="reference external" href="http://librerussia.blogspot.ru/2014/11/libreoffice-math_17.html">LibreOffice Math: Работа над
+ошибками</a></li>
+<li><a class="reference external" href="http://librerussia.blogspot.ru/2014/11/libreoffice-math.html">Пример ввода сложной формулы в LibreOffice
+Math</a></li>
+<li><a class="reference external" href="http://librerussia.blogspot.ru/2014/09/libreoffice-math-1.html">LibreOffice Math: Пример ввода формул
+(#1)</a></li>
+</ul>
+<p>Также несколько интересных примеров можно найти на странице ЧаВо в
+официальной Вики The Document Foundation:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://wiki.documentfoundation.org/Faq/Math/ru">Часто задаваемые вопросы ― LibreOffice
+Math</a></li>
+</ul>
+</div>
+</div>
+	
+
+	</article>
+
+    <p>
+	<a href="https://twitter.com/share" class="twitter-share-button" data-via="" data-lang="en" data-size="large" data-related="">Tweet</a>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	</p>
+
+
+		  </div>	
+		  
+		  <div class="sidebar">
+
+	        <nav>
+	          <h2>Категории</h2>
+	          <ul>
+	              <li class="active"><a href="/category/libreoffice.html">LibreOffice</a></li>
+	              <li ><a href="/category/razmetka.html">Разметка</a></li>
+	              <li ><a href="/category/skripty.html">Скрипты</a></li>
+	          </ul>
+	        </nav>
+
+
+
+		  </div>
+
+	  </div>
+
+      <footer>
+		<p role="contentinfo">
+		  © 2013 Dmitry Mazhartsev - Proudly powered by <a href="http://alexis.notmyidea.org/pelican/">pelican</a>. Theme <a href="https://github.com/fle/pelican-simplegrey">pelican-simplegrey</a>.
+    	</p>
+
+	  </footer>	
+
+	</div>
+	
+
+</body>
+</html>
