@@ -1,5 +1,5 @@
 :title: LibreOffice Calc: Импорт таблицы с сайта
-:date: 27.09.2014 11:00:00
+:date: 2014-09-27
 :category: LibreOffice
 :tags: LibreOffice, Calc
 

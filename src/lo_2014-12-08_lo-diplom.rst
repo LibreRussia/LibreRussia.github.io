@@ -1,5 +1,5 @@
 :title: Пособие: Оформление дипломной работы в LibreOffice (3-издание) 
-:date: 2014-12-8 21:00
+:date: 2014-12-08 21:00
 :category: LibreOffice
 :tags: Руководства, LibreOffice, Диплом, Документация
 

@@ -1,6 +1,6 @@
 :title: Скрипт для замены служебных символов в XML
 :date: 2015-06-05 00:20
-:category: Скрипты
+:category: Python
 :tags: Скрипты, Python, XML, RegExp, Регулярные выражения
 
 .. contents:: Оглавление
