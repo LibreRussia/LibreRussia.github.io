@@ -1,7 +1,7 @@
 :title: Конвертация reStructuredText в Markdown и наоборот
 :date: 2015-06-04 08:25 
 :category: Разметка
-:tags: reStructuredText, Markdown, pandoc
+:tags: reStructuredText, markdown, pandoc, docutils
 
 
 Конвертация Markdown в reStructuredText:

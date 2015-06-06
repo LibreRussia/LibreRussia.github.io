@@ -2,9 +2,12 @@
 <html lang="">	
 <head>
 	<meta charset="utf-8"/>
-	<title>pandoc - Блог про LibreOffice</title>	
+	<title>Конвертация HTML в reStructuredText и наоборот - Блог про LibreOffice</title>	
 	<meta name="author" content="Dmitry Mazhartsev">
 	
+
+	<meta name="description" content="Конвертация HTML в reStructuredText: pandoc --from=html --to=rst --output=README.rst README.html Конвертация reStructuredText в HTML: pandoc --from=rst --to=html --output=README.html README.rst Автоматизация с помощью Python import os fr_format = 'html' # Из какого формата to_format = 'rst' # В какой формат def convert(fr_format, to_format, file): out_file ...">
+
 
 	<link rel="top" href="#" /><link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,300italic,400italic,600italic|Source+Code+Pro' rel='stylesheet' type='text/css'></link>
 	<link rel="stylesheet" href="/theme/css/main.css" type="text/css" />
@@ -25,21 +28,18 @@
 	  <div class="wrapper">
 
 		  <div role="main" class="content">
-
-<h1>Post tagged: pandoc</h1>
-
-<article class="summary">
+	<article class="full">
+			
+		<h1>Конвертация HTML в reStructuredText и наоборот</h1>
+		
 <div class="metadata">
   <time datetime="2015-06-06T00:00:00+02:00" pubdate>Сб. 06 Июнь 2015</time>
     <address class="vcard author">
       by <a class="url fn" href="/author/dmitry-mazhartsev.html">Dmitry Mazhartsev</a>
     </address>
   in <a href="/category/razmetka.html">Разметка</a>
-<p class="tags">tagged <a href="/tag/restructuredtext.html">reStructuredText</a>, <a href="/tag/markdown.html">markdown</a>, <a href="/tag/pandoc.html">pandoc</a>, <a href="/tag/html.html">html</a>, <a href="/tag/docutils.html">docutils</a></p></div>  <div>
-    <h2>
-      <a href="/konvertatsiia-html-v-restructuredtext-i-naoborot.html" rel="bookmark" title="Permalink to Конвертация HTML в reStructuredText и наоборот">Конвертация HTML в reStructuredText и наоборот</a>
-    </h2>
-    <p><p>Конвертация HTML в reStructuredText:</p>
+<p class="tags">tagged <a href="/tag/restructuredtext.html">reStructuredText</a>, <a href="/tag/markdown.html">markdown</a>, <a href="/tag/pandoc.html">pandoc</a>, <a href="/tag/html.html">html</a>, <a href="/tag/docutils.html">docutils</a></p></div>		
+		<p>Конвертация HTML в reStructuredText:</p>
 <div class="highlight"><pre>pandoc --from<span class="o">=</span>html --to<span class="o">=</span>rst --output<span class="o">=</span>README.rst README.html
 </pre></div>
 <p>Конвертация reStructuredText в HTML:</p>
@@ -53,38 +53,27 @@
 <span class="n">to_format</span> <span class="o">=</span> <span class="s">&#39;rst&#39;</span>      <span class="c"># В какой формат</span>
 
 <span class="k">def</span> <span class="nf">convert</span><span class="p">(</span><span class="n">fr_format</span><span class="p">,</span> <span class="n">to_format</span><span class="p">,</span> <span class="nb">file</span><span class="p">):</span>
-  <span class="n">out_file ...</span></pre></div></div></p>
-  </div>
-</article><article class="summary">
-<div class="metadata">
-  <time datetime="2015-06-04T08:25:00+02:00" pubdate>Чт. 04 Июнь 2015</time>
-    <address class="vcard author">
-      by <a class="url fn" href="/author/dmitry-mazhartsev.html">Dmitry Mazhartsev</a>
-    </address>
-  in <a href="/category/razmetka.html">Разметка</a>
-<p class="tags">tagged <a href="/tag/restructuredtext.html">reStructuredText</a>, <a href="/tag/markdown.html">markdown</a>, <a href="/tag/pandoc.html">pandoc</a>, <a href="/tag/docutils.html">docutils</a></p></div>  <div>
-    <h2>
-      <a href="/konvertatsiia-restructuredtext-v-markdown-i-naoborot.html" rel="bookmark" title="Permalink to Конвертация reStructuredText в Markdown и наоборот">Конвертация reStructuredText в Markdown и наоборот</a>
-    </h2>
-    <p><p>Конвертация Markdown в reStructuredText:</p>
-<div class="highlight"><pre>pandoc --from<span class="o">=</span>markdown --to<span class="o">=</span>rst --output<span class="o">=</span>README.rst README.md
-</pre></div>
-<p>Конвертация reStructuredText в Markdown:</p>
-<div class="highlight"><pre>pandoc --from<span class="o">=</span>rst --to<span class="o">=</span>markdown --output<span class="o">=</span>README.md README.rst
+  <span class="n">out_file</span> <span class="o">=</span> <span class="s">&#39;{0}.{1}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">file</span><span class="p">,</span> <span class="n">to_format</span><span class="p">)</span>
+  <span class="n">command</span> <span class="o">=</span> <span class="s">&#39;pandoc --from={0} --to={1} --output={2} {3}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fr_format</span><span class="p">,</span> <span class="n">to_format</span><span class="p">,</span> <span class="n">out_file</span><span class="p">,</span> <span class="nb">file</span><span class="p">)</span>
+  <span class="n">os</span><span class="o">.</span><span class="n">popen</span><span class="p">(</span><span class="n">command</span><span class="p">)</span>
 </pre></div>
 <div class="section" id="id1">
-<h2>Ссылки</h2>
+<h3>Ссылки</h3>
 <ul class="simple">
-<li><a class="reference external" href="http://bfroehle.com/2013/04/26/converting-md-to-rst/">Converting Markdown to reStructuredText</a></li>
+<li><a class="reference external" href="http://www.johnpaulett.com/2009/10/15/html-to-restructured-text-in-python-using-pandoc/">HTML to reStructuredText in Python using Pandoc</a></li>
 <li><a class="reference external" href="http://pandoc.org/try/">Try pandoc!</a></li>
 </ul>
 </div>
-</p>
-  </div>
-</article>
-<div class="pagination">
-    Page 1 / 1
 </div>
+	
+
+	</article>
+
+    <p>
+	<a href="https://twitter.com/share" class="twitter-share-button" data-via="" data-lang="en" data-size="large" data-related="">Tweet</a>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	</p>
+
 
 		  </div>	
 		  
@@ -94,7 +83,7 @@
 	          <h2>Категории</h2>
 	          <ul>
 	              <li ><a href="/category/libreoffice.html">LibreOffice</a></li>
-	              <li ><a href="/category/razmetka.html">Разметка</a></li>
+	              <li class="active"><a href="/category/razmetka.html">Разметка</a></li>
 	              <li ><a href="/category/skripty.html">Скрипты</a></li>
 	          </ul>
 	        </nav>

@@ -30,12 +30,39 @@
 
 <article class="summary">
 <div class="metadata">
+  <time datetime="2015-06-06T00:00:00+02:00" pubdate>Сб. 06 Июнь 2015</time>
+    <address class="vcard author">
+      by <a class="url fn" href="/author/dmitry-mazhartsev.html">Dmitry Mazhartsev</a>
+    </address>
+  in <a href="/category/razmetka.html">Разметка</a>
+<p class="tags">tagged <a href="/tag/restructuredtext.html">reStructuredText</a>, <a href="/tag/markdown.html">markdown</a>, <a href="/tag/pandoc.html">pandoc</a>, <a href="/tag/html.html">html</a>, <a href="/tag/docutils.html">docutils</a></p></div>  <div>
+    <h2>
+      <a href="/konvertatsiia-html-v-restructuredtext-i-naoborot.html" rel="bookmark" title="Permalink to Конвертация HTML в reStructuredText и наоборот">Конвертация HTML в reStructuredText и наоборот</a>
+    </h2>
+    <p><p>Конвертация HTML в reStructuredText:</p>
+<div class="highlight"><pre>pandoc --from<span class="o">=</span>html --to<span class="o">=</span>rst --output<span class="o">=</span>README.rst README.html
+</pre></div>
+<p>Конвертация reStructuredText в HTML:</p>
+<div class="highlight"><pre>pandoc --from<span class="o">=</span>rst --to<span class="o">=</span>html --output<span class="o">=</span>README.html README.rst
+</pre></div>
+<div class="section" id="python">
+<h2>Автоматизация с помощью Python</h2>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="n">fr_format</span> <span class="o">=</span> <span class="s">&#39;html&#39;</span>     <span class="c"># Из какого формата</span>
+<span class="n">to_format</span> <span class="o">=</span> <span class="s">&#39;rst&#39;</span>      <span class="c"># В какой формат</span>
+
+<span class="k">def</span> <span class="nf">convert</span><span class="p">(</span><span class="n">fr_format</span><span class="p">,</span> <span class="n">to_format</span><span class="p">,</span> <span class="nb">file</span><span class="p">):</span>
+  <span class="n">out_file ...</span></pre></div></div></p>
+  </div>
+</article><article class="summary">
+<div class="metadata">
   <time datetime="2015-06-04T08:25:00+02:00" pubdate>Чт. 04 Июнь 2015</time>
     <address class="vcard author">
       by <a class="url fn" href="/author/dmitry-mazhartsev.html">Dmitry Mazhartsev</a>
     </address>
   in <a href="/category/razmetka.html">Разметка</a>
-<p class="tags">tagged <a href="/tag/restructuredtext.html">reStructuredText</a>, <a href="/tag/markdown.html">Markdown</a>, <a href="/tag/pandoc.html">pandoc</a></p></div>  <div>
+<p class="tags">tagged <a href="/tag/restructuredtext.html">reStructuredText</a>, <a href="/tag/markdown.html">markdown</a>, <a href="/tag/pandoc.html">pandoc</a>, <a href="/tag/docutils.html">docutils</a></p></div>  <div>
     <h2>
       <a href="/konvertatsiia-restructuredtext-v-markdown-i-naoborot.html" rel="bookmark" title="Permalink to Конвертация reStructuredText в Markdown и наоборот">Конвертация reStructuredText в Markdown и наоборот</a>
     </h2>
@@ -67,9 +94,8 @@
 	          <h2>Категории</h2>
 	          <ul>
 	              <li ><a href="/category/libreoffice.html">LibreOffice</a></li>
-	              <li ><a href="/category/python.html">Python</a></li>
 	              <li ><a href="/category/razmetka.html">Разметка</a></li>
-	              <li ><a href="/category/rukovodstva.html">Руководства</a></li>
+	              <li ><a href="/category/skripty.html">Скрипты</a></li>
 	          </ul>
 	        </nav>
 

@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="">	
+<head>
+	<meta charset="utf-8"/>
+	<title>Краткая инструкция по преобразования сканов для отправки в налоговую (ФНС) - Блог про LibreOffice</title>	
+	<meta name="author" content="Dmitry Mazhartsev">
+	
+
+	<meta name="description" content="В соответствии с пунктом 3.3 приказа ФНС России от 09.11.2010 N ММВ-7-6/535@, изображения для передачи по телекоммуникационным каналам связи (ТКС) должны иметь: 256 градаций серого; разрешение 150-300 DPI (точек на дюйм); глубину цвета 8. Для быстрого преобразования большого количества изображений [1] в соответсвии с требованиями ФНС ...">
+
+
+	<link rel="top" href="#" /><link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,300italic,400italic,600italic|Source+Code+Pro' rel='stylesheet' type='text/css'></link>
+	<link rel="stylesheet" href="/theme/css/main.css" type="text/css" />
+		
+
+</head>
+	
+<body>
+
+    <div class="container">
+	  
+	  <header role="banner">
+	    <div class="feeds">
+	    </div>
+		<a href="" class="title">Блог про LibreOffice</a>
+      </header>
+	
+	  <div class="wrapper">
+
+		  <div role="main" class="content">
+	<article class="full">
+			
+		<h1>Краткая инструкция по преобразования сканов для отправки в налоговую (ФНС)</h1>
+		
+<div class="metadata">
+  <time datetime="2015-05-03T00:00:00+02:00" pubdate>Вс. 03 Май 2015</time>
+    <address class="vcard author">
+      by <a class="url fn" href="/author/dmitry-mazhartsev.html">Dmitry Mazhartsev</a>
+    </address>
+  in <a href="/category/skripty.html">Скрипты</a>
+<p class="tags">tagged <a href="/tag/imagemagick.html">ImageMagick</a>, <a href="/tag/python.html">Python</a>, <a href="/tag/python3.html">Python3</a></p></div>		
+		<p>В соответствии с пунктом 3.3 приказа ФНС России от 09.11.2010 N
+ММВ-7-6/535&#64;, изображения для передачи по телекоммуникационным каналам
+связи (ТКС) должны иметь:</p>
+<ul class="simple">
+<li>256 градаций серого;</li>
+<li>разрешение 150-300 DPI (точек на дюйм);</li>
+<li>глубину цвета 8.</li>
+</ul>
+<p>Для быстрого преобразования большого количества изображений <a class="footnote-reference" href="#id4" id="id1">[1]</a> в соответсвии с требованиями ФНС необходимо.</p>
+<ol class="arabic simple">
+<li>Установть утилиту <tt class="docutils literal">ImageMagick</tt>  <a class="reference external" href="http://www.imagemagick.org/download/binaries/ImageMagick-6.9.1-2-Q16-x86-dll.exe">32-бита</a>    /   <a class="reference external" href="http://www.imagemagick.org/download/binaries/ImageMagick-6.9.1-2-Q8-x64-dll.exe">64-бита</a>
+и интерпритатор языка программирования <tt class="docutils literal">Python</tt>    <a class="reference external" href="https://www.python.org/ftp/python/3.4.3/python-3.4.3.msi">32-бита</a>    /    <a class="reference external" href="https://www.python.org/ftp/python/3.4.3/python-3.4.3.amd64.msi">64-бита</a>;</li>
+<li>Скачать скрипт    <tt class="docutils literal"><span class="pre">magick-fns-gray</span></tt>(<a class="reference external" href="https://yadi.sk/d/HpdTtZM4gQWmf">скачать</a>) и поместить его в папку с изображениями, которые необходимо
+преобразовать;</li>
+</ol>
+<div class="figure align-center">
+<img alt="" src="img/2015-05-03_magick-fns-gray/2015-05-03_magick-fns-gray-001.jpg" style="width: 400px;" />
+</div>
+<ol class="arabic simple">
+<li>Дважды щелкнуть по скрипту левой кнопкой мыши;</li>
+<li>Дождаться завершения преобразования. Вся информация выводится в
+черном окне.</li>
+</ol>
+<div class="figure align-center">
+<img alt="" src="img/2015-05-03_magick-fns-gray/2015-05-03_magick-fns-gray-002.jpg" style="width: 400px;" />
+</div>
+<ol class="arabic simple">
+<li>Преобразованные файлы появятся в папке <tt class="docutils literal">magick_out</tt>.</li>
+</ol>
+<p>Скрипт кроссплатформенный, работает в ОС Linux, Windows, Mac OS и
+других, которые поддерживаются программой <tt class="docutils literal">ImageMagick</tt> и языком
+<tt class="docutils literal">Python</tt>.</p>
+<div class="section" id="id2">
+<h2>Материалы по теме.</h2>
+<ul class="simple">
+<li><a class="reference external" href="http://librerussia.blogspot.ru/2014/09/imagemagick.html">ImageMagick: Пакетная обработка изображений с разной
+ориентацией</a></li>
+<li><a class="reference external" href="http://librerussia.blogspot.ru/2014/09/imagemagick_30.html">ImageMagick: добавление фона к
+изображению</a></li>
+<li><a class="reference external" href="http://librerussia.blogspot.ru/2014/09/imagemagick_29.html">ImageMagick: кадрирование(обрезка)
+изображений</a></li>
+<li><a class="reference external" href="http://librerussia.blogspot.ru/2014/12/libreoffice.html">LibreOffice: уменьшение размера документа с помощью пакетной
+обработки
+изображений</a></li>
+</ul>
+</div>
+<div class="section" id="id3">
+<h2>Сайты</h2>
+<ul class="simple">
+<li><a class="reference external" href="https://www.python.org">Python</a></li>
+<li><a class="reference external" href="http://www.imagemagick.org">ImageMagick</a></li>
+</ul>
+<hr class="docutils" />
+<table class="docutils footnote" frame="void" id="id4" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>Преобразовывать можно от 1 изображения до ..., верхнего ограничения
+нет, все упирается в параметры компьютера. Время обработки также
+зависит от размеров изображений и параметров ПК.</td></tr>
+</tbody>
+</table>
+</div>
+	
+
+	</article>
+
+    <p>
+	<a href="https://twitter.com/share" class="twitter-share-button" data-via="" data-lang="en" data-size="large" data-related="">Tweet</a>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	</p>
+
+
+		  </div>	
+		  
+		  <div class="sidebar">
+
+	        <nav>
+	          <h2>Категории</h2>
+	          <ul>
+	              <li ><a href="/category/libreoffice.html">LibreOffice</a></li>
+	              <li ><a href="/category/razmetka.html">Разметка</a></li>
+	              <li class="active"><a href="/category/skripty.html">Скрипты</a></li>
+	          </ul>
+	        </nav>
+
+
+
+		  </div>
+
+	  </div>
+
+      <footer>
+		<p role="contentinfo">
+		  © 2013 Dmitry Mazhartsev - Proudly powered by <a href="http://alexis.notmyidea.org/pelican/">pelican</a>. Theme <a href="https://github.com/fle/pelican-simplegrey">pelican-simplegrey</a>.
+    	</p>
+
+	  </footer>	
+
+	</div>
+	
+
+</body>
+</html>
