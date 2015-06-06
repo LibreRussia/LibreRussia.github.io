@@ -19,7 +19,7 @@
     2  over   {9-y} - 2 over y = {x-1} over 10
     } right none
 
-.. figure:: /home/dmitry/Docs/LibreRussia/librerussia.github.io/img/2015-02-05_lo-math-align/2015-02-05_lo-math-align-001.png
+.. figure:: img/2015-02-05_lo-math-align/2015-02-05_lo-math-align-001.png
        :width: 300 px
        :align: center
        :alt:
@@ -40,7 +40,7 @@
     alignc {2  over   {9-y} - 2 over y = {x-1} over 10}
     } right none
 
-.. figure:: /home/dmitry/Docs/LibreRussia/librerussia.github.io/img/2015-02-05_lo-math-align/2015-02-05_lo-math-align-002.png
+.. figure:: img/2015-02-05_lo-math-align/2015-02-05_lo-math-align-002.png
        :width: 300 px
        :align: center
        :alt:

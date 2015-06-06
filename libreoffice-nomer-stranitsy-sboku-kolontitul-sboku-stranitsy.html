@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="">	
+<head>
+	<meta charset="utf-8"/>
+	<title>LibreOffice: Номер страницы сбоку (Колонтитул сбоку страницы) - Блог про LibreOffice</title>	
+	<meta name="author" content="Dmitry Mazhartsev">
+	
+
+	<meta name="description" content="Вдогонку к статьям: LibreOffice: Все о нумерации страниц (Часть I) LibreOffice: Все о нумерации страниц (Часть II) Забыл рассказать ещё один трюк. Однажды меня спросили как сделать номер страницы сбоку этой страницы. Иногда спрашивают как сделать колонтитул сбоку страницы. Сам колонтитул нельзя расположить сбоку страницы. Но так как номер страницы ...">
+
+
+	<link rel="top" href="#" /><link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,300italic,400italic,600italic|Source+Code+Pro' rel='stylesheet' type='text/css'></link>
+	<link rel="stylesheet" href="/theme/css/main.css" type="text/css" />
+		
+
+</head>
+	
+<body>
+
+    <div class="container">
+	  
+	  <header role="banner">
+	    <div class="feeds">
+	    </div>
+		<a href="" class="title">Блог про LibreOffice</a>
+      </header>
+	
+	  <div class="wrapper">
+
+		  <div role="main" class="content">
+	<article class="full">
+			
+		<h1>LibreOffice: Номер страницы сбоку (Колонтитул сбоку страницы)</h1>
+		
+<div class="metadata">
+  <time datetime="2015-01-31T00:00:00+01:00" pubdate>Сб. 31 Январь 2015</time>
+    <address class="vcard author">
+      by <a class="url fn" href="/author/dmitry-mazhartsev.html">Dmitry Mazhartsev</a>
+    </address>
+  in <a href="/category/libreoffice.html">LibreOffice</a>
+<p class="tags">tagged <a href="/tag/rukovodstva.html">Руководства</a>, <a href="/tag/libreoffice.html">LibreOffice</a>, <a href="/tag/writer.html">Writer</a>, <a href="/tag/impress.html">Impress</a>, <a href="/tag/calc.html">Calc</a>, <a href="/tag/base.html">Base</a>, <a href="/tag/draw.html">Draw</a></p></div>		
+		<p>Вдогонку к статьям:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://librerussia.blogspot.ru/2015/01/libreoffice-page-numbers.html">LibreOffice: Все о нумерации страниц (Часть
+I)</a></li>
+<li><a class="reference external" href="http://librerussia.blogspot.ru/2015/01/libreoffice-page-numbers-2.html">LibreOffice: Все о нумерации страниц (Часть
+II)</a></li>
+</ul>
+<p>Забыл рассказать ещё один трюк. Однажды меня спросили как сделать номер
+страницы сбоку этой страницы. Иногда спрашивают как сделать колонтитул
+сбоку страницы.</p>
+<p>Сам колонтитул нельзя расположить сбоку страницы. Но так как номер
+страницы является полем с данными, то нет никаких проблем в том, чтобы
+расположить его в любом другом месте страницы, например, во врезке. Саму
+врезку также можно разместить где угодно.</p>
+<p>Аналогично, если нужно подобие колонтитула, который помимо номера
+содержит ещё и, к примеру, заголовок главы. Заголовок главы также
+является полем, которое можно вставить в любое место.</p>
+<p>Итак.</p>
+<ol class="arabic simple">
+<li>Вставьте врезку (<em>Вставка → Врезка</em>) и расположите её сбоку страницы.</li>
+<li>Установите курсор во врезку и вставьте в неё поле с номером страницы
+(<em>Вставка → Поля → Номер страницы</em>).</li>
+</ol>
+<div class="figure align-center">
+<img alt="" src="img/lo_2015-01-31_lo-nomer-v-kolontitule/lo_2015-01-31_lo-nomer-v-kolontitule-001.png" style="width: 400px;" />
+</div>
+<ol class="arabic simple">
+<li>Выделите номер и откройте диалог <em>Символы</em> (<em>Формат → Символы</em>).</li>
+<li>На вкладке <em>Положение</em> поверните символ на 90 градусов.</li>
+</ol>
+<div class="figure align-center">
+<img alt="" src="img/lo_2015-01-31_lo-nomer-v-kolontitule/lo_2015-01-31_lo-nomer-v-kolontitule-002.png" style="width: 400px;" />
+</div>
+<p>Аналогично можно сделать и сложный колонтитул. Достаточно растянуть
+врезку под нужные размеры и поместить туда дополнительные поля. Для
+примера я поместил поле с датой.</p>
+<div class="figure align-center">
+<img alt="" src="img/lo_2015-01-31_lo-nomer-v-kolontitule/lo_2015-01-31_lo-nomer-v-kolontitule-003.png" style="width: 400px;" />
+</div>
+<p>Рекомендую установить врезке параметр <em>Привязка</em> в режим <em>К странице</em>.
+Для этого нажмите правой кнопкой мыши на врезку и выберите пункт
+<em>Привязка</em>.</p>
+<p>Стоит иметь ввиду, что в данном случае врезка будет только на текущей
+странице. Если требуется добавить несколько подобных страниц, то врезку
+следует разместить в верхнем или нижнем колонтитуле (колонтитулы следует
+добавлять через редактирование свойств стиля страницы), выравняв врезку
+по нужному краю страницы.Тогда она автоматически появится на всех
+страницах с данным стилем, идущих друг за другом.</p>
+<div class="section" id="id1">
+<h2>Смотрите также:</h2>
+<ul class="simple">
+<li><a class="reference external" href="http://librerussia.blogspot.ru/2015/01/libreoffice-page-numbers.html">LibreOffice: Все о нумерации страниц (Часть
+I)</a></li>
+<li><a class="reference external" href="http://librerussia.blogspot.ru/2015/01/libreoffice-page-numbers-2.html">LibreOffice: Все о нумерации страниц (Часть
+II)</a></li>
+<li><a class="reference external" href="http://librerussia.blogspot.ru/2014/10/libreoffice_2.html">Поля с
+данными</a></li>
+<li><a class="reference external" href="http://librerussia.blogspot.ru/2014/12/libreoffice-writer-base.html">Связанные
+поля</a></li>
+<li><a class="reference external" href="http://librerussia.blogspot.ru/2015/01/writer-povorot.html">Writer: Как повернуть текст (на любой
+угол)</a></li>
+</ul>
+</div>
+	
+
+	</article>
+
+    <p>
+<script type="text/javascript" src="//yastatic.net/share/share.js" charset="utf-8"></script><div class="yashare-auto-init" data-yashareL10n="ru" data-yashareType="small" data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,moimir,gplus" data-yashareTheme="counter"></div>
+	</p>
+
+
+		  </div>	
+		  
+		  <div class="sidebar">
+
+	        <nav>
+	          <h2>Категории</h2>
+	          <ul>
+	              <li class="active"><a href="/category/libreoffice.html">LibreOffice</a></li>
+	              <li ><a href="/category/python.html">Python</a></li>
+	              <li ><a href="/category/razmetka.html">Разметка</a></li>
+	          </ul>
+	        </nav>
+
+
+
+		  </div>
+
+	  </div>
+
+      <footer>
+		<p role="contentinfo">
+		  © 2013 Dmitry Mazhartsev - Proudly powered by <a href="http://alexis.notmyidea.org/pelican/">pelican</a>. Theme <a href="https://github.com/fle/pelican-simplegrey">pelican-simplegrey</a>.
+    	</p>
+
+	  </footer>	
+
+	</div>
+	
+
+</body>
+</html>
