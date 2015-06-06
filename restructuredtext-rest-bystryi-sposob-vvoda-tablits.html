@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="">	
+<head>
+	<meta charset="utf-8"/>
+	<title>reStructuredText (ReST): Быстрый способ ввода таблиц - Блог про LibreOffice</title>	
+	<meta name="author" content="Dmitry Mazhartsev">
+	
+
+	<meta name="description" content="Когда дело касается больших таблиц, то их не очень удобно набирать вручную. Так как мне приходится работать в основном над переносом текста из LibreOffice (odf, doc, docx и т.д.), то я нашел быстрый, легкий и удобный способ с использованием CSV-таблиц и LibreOffice. Напомню, что CSV таблицы в reStructuredText вводятся ...">
+
+
+	<link rel="top" href="#" /><link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,300italic,400italic,600italic|Source+Code+Pro' rel='stylesheet' type='text/css'></link>
+	<link rel="stylesheet" href="/theme/css/main.css" type="text/css" />
+		
+
+</head>
+	
+<body>
+
+    <div class="container">
+	  
+	  <header role="banner">
+	    <div class="feeds">
+	    </div>
+		<a href="" class="title">Блог про LibreOffice</a>
+      </header>
+	
+	  <div class="wrapper">
+
+		  <div role="main" class="content">
+	<article class="full">
+			
+		<h1>reStructuredText (ReST): Быстрый способ ввода таблиц</h1>
+		
+<div class="metadata">
+  <time datetime="2015-02-03T00:00:00+01:00" pubdate>Вт. 03 Февраль 2015</time>
+    <address class="vcard author">
+      by <a class="url fn" href="/author/dmitry-mazhartsev.html">Dmitry Mazhartsev</a>
+    </address>
+  in <a href="/category/razmetka.html">Разметка</a>
+<p class="tags">tagged <a href="/tag/restructuredtext.html">reStructuredText</a>, <a href="/tag/markdown.html">markdown</a>, <a href="/tag/pandoc.html">pandoc</a>, <a href="/tag/html.html">html</a>, <a href="/tag/docutils.html">docutils</a></p></div>		
+		<p>Когда дело касается больших таблиц, то их не очень удобно набирать
+вручную. Так как мне приходится работать в основном над переносом текста
+из LibreOffice (odf, doc, docx и т.д.), то я нашел быстрый, легкий и
+удобный способ с использованием CSV-таблиц и LibreOffice.</p>
+<p>Напомню, что CSV таблицы в reStructuredText вводятся следующим образом:</p>
+<pre class="literal-block">
+.. csv-table:: CSV-таблица
+   :header: &quot;Treat&quot;, &quot;Quantity&quot;, &quot;Description&quot;
+   :widths: 15, 10, 30
+
+   &quot;Albatross&quot;, 2.99, &quot;On a stick!&quot;
+   &quot;Crunchy Frog&quot;, 1.49, &quot;If we took the bones out, it wouldn't be
+   crunchy, now would it?&quot;
+   &quot;Gannet Ripple&quot;, 1.99, &quot;On a stick!&quot;
+</pre>
+<p>Все достаточно просто. Строки вводятся на новых строках, а столбцы
+разделяются запятыми. Внутреннее содержимое ячеек лучше брать в кавычки.</p>
+<p>Результат:</p>
+<div class="figure align-center">
+<img alt="" src="img/2015-02-03_rest-tables/2015-02-03_rst-tables-001.png" style="width: 350px;" />
+</div>
+<p>В LibreOffice Writer есть функция преобразования текста разделенного
+запятыми (на самом деле разделитель может быть любой) в таблицу и
+наоборот, преобразование таблицы в текст разделенный запятыми.</p>
+<p>Таким образом, при составлении ReST файла я беру шапку таблицы:</p>
+<pre class="literal-block">
+.. csv-table:: CSV-таблица
+   :header: &quot;Treat&quot;, &quot;Quantity&quot;, &quot;Description&quot;
+   :widths: 15, 10, 30
+</pre>
+<p>А само содержимое набираю в LibreOffice, как это обычно делается в
+подобных программах.</p>
+<div class="figure align-center">
+<img alt="" src="img/2015-02-03_rest-tables/2015-02-03_rst-tables-002.png" style="width: 350px;" />
+</div>
+<p>Далее выделяю таблицу и перехожу в <em>Таблица &gt; Преобразовать &gt; Таблицу в
+текст</em>. Откроется диалог, в котором я устанавливаю в качестве
+разделителя запятую.</p>
+<div class="figure align-center">
+<img alt="" src="img/2015-02-03_rest-tables/2015-02-03_rst-tables-003.png" style="width: 350px;" />
+</div>
+<p>Получившийся материал копирую в ReST файл.</p>
+<div class="figure align-center">
+<img alt="" src="img/2015-02-03_rest-tables/2015-02-03_rst-tables-004.png" style="width: 350px;" />
+</div>
+<pre class="literal-block">
+&quot;Albatross&quot;, 2.99, &quot;On a stick!&quot;
+&quot;Crunchy Frog&quot;, 1.49, &quot;If we took the bones out, it wouldn't be crunchy, now would it?&quot;
+&quot;Gannet Ripple&quot;, 1.99, &quot;On a stick!&quot;
+</pre>
+<p><strong>ПРИМЕЧАНИЕ!</strong> В <em>Сервис &gt; Параметры автозамены</em> на вкладке
+<em>Национальные</em> рекомендую отключить преобразование кавычек.</p>
+<div class="figure align-center">
+<img alt="" src="img/2015-02-03_rest-tables/2015-02-03_rst-tables-005.png" style="width: 350px;" />
+</div>
+	
+
+	</article>
+
+    <p>
+	<a href="https://twitter.com/share" class="twitter-share-button" data-via="" data-lang="en" data-size="large" data-related="">Tweet</a>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	</p>
+
+
+		  </div>	
+		  
+		  <div class="sidebar">
+
+	        <nav>
+	          <h2>Категории</h2>
+	          <ul>
+	              <li ><a href="/category/libreoffice.html">LibreOffice</a></li>
+	              <li class="active"><a href="/category/razmetka.html">Разметка</a></li>
+	              <li ><a href="/category/skripty.html">Скрипты</a></li>
+	          </ul>
+	        </nav>
+
+
+
+		  </div>
+
+	  </div>
+
+      <footer>
+		<p role="contentinfo">
+		  © 2013 Dmitry Mazhartsev - Proudly powered by <a href="http://alexis.notmyidea.org/pelican/">pelican</a>. Theme <a href="https://github.com/fle/pelican-simplegrey">pelican-simplegrey</a>.
+    	</p>
+
+	  </footer>	
+
+	</div>
+	
+
+</body>
+</html>
