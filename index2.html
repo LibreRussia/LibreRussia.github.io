@@ -29,29 +29,66 @@
 
 
       <article>
-        <h1><a href="/konvertatsiia-html-v-restructuredtext-i-naoborot.html">Конвертация HTML в reStructuredText и наоборот</a></h1>
-        <p>Конвертация HTML в reStructuredText:</p>
-<div class="highlight"><pre>pandoc --from<span class="o">=</span>html --to<span class="o">=</span>rst --output<span class="o">=</span>README.rst README.html
+        <h1><a href="/python-3-rabota-s-zip-arkhivami-modul-zipfile.html">Python 3: Работа с zip архивами. Модуль ZipFile</a></h1>
+        <p><strong>Импорт модуля ZipFile:</strong></p>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">zipfile</span>
 </pre></div>
-<p>Конвертация reStructuredText в HTML:</p>
-<div class="highlight"><pre>pandoc --from<span class="o">=</span>rst --to<span class="o">=</span>html --output<span class="o">=</span>README.html README.rst
+<p><strong>Работа с zip архивами:</strong></p>
+<div class="highlight"><pre><span class="n">ZipFile</span><span class="p">(</span><span class="n">filename</span> <span class="p">[,</span> <span class="n">mode</span> <span class="p">[,</span> <span class="n">compression</span> <span class="p">[,</span> <span class="n">allowZip64</span><span class="p">]]])</span>
 </pre></div>
-<p><strong>Автоматизация с помощью Python</strong></p>
-<div class="highlight"><pre><span class="kn">import</span> <span class="nn">os</span>
+<p><tt class="docutils literal">filename</tt> - имя файла zip архива.</p>
+<p><tt class="docutils literal">mode</tt>:</p>
+<ul class="simple">
+<li><tt class="docutils literal">r</tt> - файл будет открыт для чтения;</li>
+<li><tt class="docutils literal">w</tt> - если файл существует, то он будет уничтожен и вместо него будет создан новый файл;</li>
+<li><tt class="docutils literal">a</tt> - существующий файл будет открыт в режиме добавления в конец.</li>
+</ul>
+<p><tt class="docutils literal">compression</tt> определяет метод сжатия, который должен использоваться при записи в архив. Он принимает одно из значений: <tt class="docutils literal">ZIP_STORED</tt> или <tt class="docutils literal">ZIP_DEFLATED</tt>. По умолчанию используется значение <tt class="docutils literal">ZIP_STORED</tt>. Последний аргумент</p>
+<p><tt class="docutils literal">allowZip64</tt> позволяет разрешить использование расширений <tt class="docutils literal">ZIP64</tt>, которые дают возможность создавать архивы размером больше 2 гигабайт. По умолчанию равен False.</p>
+<p>Итак, давайте откроем наш ранее созданный архив для чтения:</p>
+<p><strong>Является ли файл zip архивом:</strong></p>
+<div class="highlight"><pre><span class="n">zipfile</span><span class="o">.</span><span class="n">is_zipfile</span><span class="p">(</span><span class="s">&#39;xml_healer.zip&#39;</span><span class="p">)</span>
+<span class="bp">True</span>
+</pre></div>
+<p><strong>Чтение архива:</strong></p>
+<div class="highlight"><pre><span class="n">z</span> <span class="o">=</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZipFile</span><span class="p">(</span><span class="s">&#39;xml_healer.zip&#39;</span><span class="p">,</span> <span class="s">&#39;r&#39;</span><span class="p">)</span>
+</pre></div>
+<p><strong>Просмотр содержимого:</strong></p>
+<div class="highlight"><pre><span class="n">z</span><span class="o">.</span><span class="n">printdir</span><span class="p">()</span>
+</pre></div>
+<p><strong>Извлечение содержимого:</strong></p>
+<div class="highlight"><pre><span class="n">z</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="s">&#39;file&#39;</span><span class="p">)</span> <span class="c"># Извлечь файл из архива</span>
 
-<span class="n">fr_format</span> <span class="o">=</span> <span class="s">&#39;html&#39;</span>     <span class="c"># Из какого формата</span>
-<span class="n">to_format</span> <span class="o">=</span> <span class="s">&#39;rst&#39;</span>      <span class="c"># В какой формат</span>
+<span class="n">z</span><span class="o">.</span><span class="n">extractall</span><span class="p">()</span>    <span class="c"># Извлечь все файлы</span>
+</pre></div>
+<p><strong>Запись содержимого:</strong></p>
+<div class="highlight"><pre><span class="k">with</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZipFile</span><span class="p">(</span><span class="s">&#39;spam.zip&#39;</span><span class="p">,</span> <span class="s">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">myzip</span><span class="p">:</span>
+    <span class="n">myzip</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&#39;file&#39;</span><span class="p">)</span>
+</pre></div>
+<div class="highlight"><pre><span class="n">z</span> <span class="o">=</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZipFile</span><span class="p">(</span><span class="s">&#39;spam.zip&#39;</span><span class="p">,</span> <span class="s">&#39;w&#39;</span><span class="p">)</span>
+<span class="n">z</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&#39;file&#39;</span><span class="p">)</span>
+<span class="n">z</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+<p>Для записи всех файлов в директории можно воспользоваться функцией <tt class="docutils literal">os.walk</tt>:</p>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">zipfile</span>
+<span class="kn">import</span> <span class="nn">os</span>
 
-<span class="k">def</span> <span class="nf">convert</span><span class="p">(</span><span class="n">fr_format</span><span class="p">,</span> <span class="n">to_format</span><span class="p">,</span> <span class="nb">file</span><span class="p">):</span>
-  <span class="n">out_file</span> <span class="o">=</span> <span class="s">&#39;{0}.{1}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">file</span><span class="p">,</span> <span class="n">to_format</span><span class="p">)</span>
-  <span class="n">command</span> <span class="o">=</span> <span class="s">&#39;pandoc --from={0} --to={1} --output={2} {3}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fr_format</span><span class="p">,</span> <span class="n">to_format</span><span class="p">,</span> <span class="n">out_file</span><span class="p">,</span> <span class="nb">file</span><span class="p">)</span>
-  <span class="n">os</span><span class="o">.</span><span class="n">popen</span><span class="p">(</span><span class="n">command</span><span class="p">)</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZipFile</span><span class="p">(</span><span class="s">&#39;spam.zip&#39;</span><span class="p">,</span> <span class="s">&#39;w&#39;</span><span class="p">)</span>        <span class="c"># Создание нового архива</span>
+<span class="k">for</span> <span class="n">root</span><span class="p">,</span> <span class="n">dirs</span><span class="p">,</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="s">&#39;folder&#39;</span><span class="p">):</span> <span class="c"># Список всех файлов и папок в директории folder</span>
+<span class="k">for</span> <span class="nb">file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+   <span class="n">z</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root</span><span class="p">,</span><span class="nb">file</span><span class="p">))</span>         <span class="c"># Создание относительных путей и запись файлов в архив</span>
+
+<span class="n">z</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+<p><strong>Закрытие архива:</strong></p>
+<div class="highlight"><pre><span class="n">z</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 <div class="section" id="id1">
-<h2>Ссылки</h2>
+<h2>Ссылки:</h2>
 <ul class="simple">
-<li><a class="reference external" href="http://www.johnpaulett.com/2009/10/15/html-to-restructured-text-in-python-using-pandoc/">HTML to reStructuredText in Python using Pandoc</a></li>
-<li><a class="reference external" href="http://pandoc.org/try/">Try pandoc!</a></li>
+<li><a class="reference external" href="https://docs.python.org/3.3/library/zipfile.html?highlight=zipfile#module-zipfile">13.5. zipfile — Work with ZIP archives</a></li>
+<li><a class="reference external" href="http://sayakhov.com/blog/post/6/">Работаем с zip архивами в Python</a></li>
+<li><a class="reference external" href="http://www.cyberforum.ru/python/thread1268498.html">Python - Добавление файлов в архив. Создание копий директорий</a></li>
 </ul>
 </div>
 
@@ -63,6 +100,12 @@
           <h3>Last posts</h3>
           <ol class="archive">
     
+
+
+      <li>
+<a href="/konvertatsiia-html-v-restructuredtext-i-naoborot.html" rel="bookmark" title="Permalink to Конвертация HTML в reStructuredText и наоборот">Конвертация HTML в reStructuredText и наоборот</a>
+  <time datetime="2015-06-06T00:00:00+02:00" pubdate>Сб. 06 Июнь 2015</time>
+<p class="tags">tags: <a href="/tag/restructuredtext.html">reStructuredText</a><a href="/tag/markdown.html">markdown</a><a href="/tag/pandoc.html">pandoc</a><a href="/tag/html.html">html</a><a href="/tag/docutils.html">docutils</a></p></a>      </li>
 
 
       <li>
@@ -89,10 +132,6 @@
 <p class="tags">tags: <a href="/tag/rukovodstva.html">Руководства</a><a href="/tag/libreoffice.html">LibreOffice</a><a href="/tag/impress.html">Impress</a></p></a>      </li>
 
 
-      <li>
-<a href="/kratkoe-rukovodstvo-po-redaktoru-vektornoi-grafiki-libreoffice-draw.html" rel="bookmark" title="Permalink to Краткое руководство по редактору векторной графики LibreOffice Draw">Краткое руководство по редактору векторной графики LibreOffice Draw</a>
-  <time datetime="2015-04-01T00:00:00+02:00" pubdate>Ср. 01 Апрель 2015</time>
-<p class="tags">tags: <a href="/tag/rukovodstva.html">Руководства</a><a href="/tag/libreoffice.html">LibreOffice</a><a href="/tag/draw.html">Draw</a></p></a>      </li>
 
 
 
