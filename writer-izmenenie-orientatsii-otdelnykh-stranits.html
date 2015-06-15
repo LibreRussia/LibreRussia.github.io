@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="">	
+<head>
+	<meta charset="utf-8"/>
+	<title>Writer: Изменение ориентации отдельных страниц - Блог про LibreOffice</title>	
+	<meta name="author" content="Dmitry Mazhartsev">
+	
+
+	<meta name="description" content="Writer: Изменение ориентации отдельных страниц Обычно для всего документа задается единая ориентация страниц. Но в некоторых случаях требуется сделать одну или несколько страниц иной ориентации. Предлагаю несколько способов сделать это. В качестве исходного условия принимаем ситуацию, когда среди портретноориентированных страниц надо вставить две страницы альбомной ориентации. Попутно статья отвечает на ...">
+
+
+	<link rel="top" href="#" /><link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,300italic,400italic,600italic|Source+Code+Pro' rel='stylesheet' type='text/css'></link>
+	<link rel="stylesheet" href="/theme/css/main.css" type="text/css" />
+		
+
+</head>
+	
+<body>
+
+    <div class="container">
+	  
+	  <header role="banner">
+	    <div class="feeds">
+	    </div>
+		<a href="" class="title">Блог про LibreOffice</a>
+      </header>
+	
+	  <div class="wrapper">
+
+		  <div role="main" class="content">
+	<article class="full">
+			
+		<h1>Writer: Изменение ориентации отдельных страниц</h1>
+		
+<div class="metadata">
+  <time datetime="2015-01-19T00:00:00+01:00" pubdate>Пн. 19 Январь 2015</time>
+    <address class="vcard author">
+      by <a class="url fn" href="/author/dmitry-mazhartsev.html">Dmitry Mazhartsev</a>
+    </address>
+  in <a href="/category/libreoffice.html">LibreOffice</a>
+<p class="tags">tagged <a href="/tag/libreoffice.html">LibreOffice</a>, <a href="/tag/writer.html">Writer</a></p></div>		
+		<div class="section" id="writer">
+<h2>Writer: Изменение ориентации отдельных страниц</h2>
+<p>Обычно для всего документа задается единая ориентация страниц. Но в
+некоторых случаях требуется сделать одну или несколько страниц иной
+ориентации.</p>
+<p>Предлагаю несколько способов сделать это. В качестве исходного условия
+принимаем ситуацию, когда среди портретноориентированных страниц надо
+вставить две страницы альбомной ориентации.</p>
+<div class="figure align-center">
+<img alt="" src="/home/dmitry/Docs/LibreRussia/librerussia.github.io/img/lo_2015-01-19_libreoffice-writer-break/lo_2015-01-19_libreoffice-writer-break.001.png" style="width: 350px;" />
+</div>
+<p>Попутно статья отвечает на следующие вопросы:</p>
+<ul class="simple">
+<li>Как сделать, чтобы заголовок начинался с новой страницы</li>
+<li>Как изменить нумерацию страниц</li>
+<li>Как вставить разрыв</li>
+<li>Как удалить разрыв</li>
+</ul>
+<div class="section" id="id1">
+<h3>Ручной способ</h3>
+<p>Чтобы изменить ориентацию страницы, надо сначала вставить <em>Разрыв
+страницы</em> и задать следуемый за ним стиль страницы.</p>
+<ol class="arabic simple">
+<li>Открываем документ и устанавливаем курсор мыши на странице за
+текстом. Т.е. если у нас имеется некоторый текст, то курсор должен
+располагаться за ним, иначе часть текста после курсора перескочит на
+следующую страницу.</li>
+<li>Так как нам надо <strong>вставить</strong> разрыв, следовательно идем на вкладку
+<em>«Вставка → Разрыв»</em>.</li>
+<li>Откроется диалог «Вставить разрыв», в котором устанавливаем маркер
+напротив <em>«Разрыв страниц»</em>, а в списке <em>«Стиль»</em> выбираем
+<em>«Альбомный»</em>. Нажимаем <em>«ОК»</em>.</li>
+</ol>
+<div class="figure align-center">
+<img alt="" src="/home/dmitry/Docs/LibreRussia/librerussia.github.io/img/lo_2015-01-19_libreoffice-writer-break/lo_2015-01-19_libreoffice-writer-break.002.png" style="width: 250px;" />
+</div>
+<p>Альбомная страница вставлена. Разрыв обозначается синей полосой над
+страницей. Теперь нажмем сочетание клавиш <tt class="docutils literal">Ctrl+Enter</tt> на клавиатуре.
+У нас появится еще одна альбомная страница. Вместо сочетания клавиш
+можно было ещё раз выполнить вставку разрыва.</p>
+<p>Чтобы после альбомных страниц снова шли страницы с портретной
+ориентацией, повторяем шаги 1-3, но только в списке <em>«Стиль»</em> выбираем
+<em>«Базовый»</em> (или тот, который вы создали).</p>
+<p>Ничего сложного нет. Но стоит иметь ввиду, если вы изменяли параметры
+страницы вне стиля (т.е. просто через диалог <em>«Формат → Страница»</em>), то
+скорее всего, после вставки стиля <em>«Базовый»</em> у вас будут идти страницы
+с другими параметрами.</p>
+<p>Чтобы избежать этого, лучше заранее создать нужный вам стиль страницы
+или изменить уже существующий стиль страницы под свои требования. О том
+что такое стили и как с ними работать можно прочитать
+<a class="reference external" href="http://librerussia.blogspot.ru/2014/11/LibreOffice-Styles-000.html">здесь</a>.</p>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>Ложный путь</h2>
+<p>На многих форумах и блогах дают ошибочное решение этого вопроса. Там
+предлагается открыть диалог параметров страницы <em>«Формат → Страница»</em> и
+на вкладке <em>«Управление»</em> выбрать <em>«Следующий стиль»</em>.</p>
+<div class="figure align-center">
+<img alt="" src="/home/dmitry/Docs/LibreRussia/librerussia.github.io/img/lo_2015-01-19_libreoffice-writer-break/lo_2015-01-19_libreoffice-writer-break.003.png" style="width: 350px;" />
+</div>
+<p>Такой подход приводит к путанице. Это совсем другая функция. Допустим, у
+вас имеется страница со стилем <em>«Базовый»</em> и это основной стиль всех
+страниц в вашем документе. За каждой страницей со стилем <em>«Базовый»</em>
+автоматически следует страница с таким же стилем. Если вы зададите ему
+<em>«Следующий стиль»</em>, например, <em>«Альбомный»</em>, то у вас начнется
+чередование страниц. Каждый раз после страницы со стилем <em>«Базовый»</em>
+будет автоматически следовать страница со стилем <em>«Альбомный»</em>. Как
+только после альбомной странице вы вставите базовую страницу, после
+базовой снова пойдет альбомная и так будет происходить каждый раз.</p>
+<p>Поэтому не стоит так делать. Для нарушения нормального хода страниц и
+используется разрыв страницы, так как обычно требуется вставить только
+одну-две отличные от остальных страницы.</p>
+<div class="section" id="pager">
+<h3>Расширение Pager</h3>
+<p>Есть удобное расширение Pager (<a class="reference external" href="http://myooo.ru/content/view/106/99/">http://myooo.ru/content/view/106/99/</a>),
+которое служит для быстрой вставки страниц. В том числе, с его помощью
+можно быстро изменить ориентацию отдельных страниц.</p>
+</div>
+<div class="section" id="id3">
+<h3>Параметры страницы</h3>
+<p>В LibreOffice все построено на стилях. Даже если вы явно их не
+применяете, то вы все равно пользуетесь стилями. Любая страница имеет
+свой стиль. В стандартном шаблоне по умолчанию используется страница со
+стилем <em>«Базовый»</em>.</p>
+<p>Если вы просто идете во вкладку <em>«Формат → Страница»</em> и изменяете там
+параметры страницы, вы не изменяете сам стиль. Вы вносите изменения
+только для конкретной страницы. Поэтому, если вам требуется изменить
+параметры страницы, меняйте стиль страницы.</p>
+<p>Подробнее о стилях написано:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://librerussia.blogspot.ru/2014/11/LibreOffice-Styles-000.html">Руководство по стилям
+LibreOffice</a></li>
+<li><a class="reference external" href="http://libreoffice.readthedocs.org/ru/latest/Using-Styles-and-Templates.html">Краткое руководство по
+LibreOffice</a></li>
+</ul>
+<p>Не ленитесь изучать стили. В МС Офис тоже все строится на стилях.
+Большие документы невозможно грамотно оформлять без их использования.</p>
+</div>
+<div class="section" id="id4">
+<h3>Заголовок с новой страницы</h3>
+<p>С помощью разрыва страницы можно, например, сделать чтобы все заголовки
+глав автоматически начинались с новой страницы.</p>
+<p>Для этого в стиле заголовка на вкладке <em>«Положение на странице»</em>
+необходимо задать <em>«Разрывы»</em>. Можно не указывать конкретный стиль
+страницы, тогда будет применен стиль страницы используемый во всем
+документе.</p>
+<div class="figure align-center">
+<img alt="" src="/home/dmitry/Docs/LibreRussia/librerussia.github.io/img/lo_2015-01-19_libreoffice-writer-break/lo_2015-01-19_libreoffice-writer-break.004.png" style="width: 350px;" />
+</div>
+</div>
+<div class="section" id="id5">
+<h3>Изменить нумерацию страниц</h3>
+<p>С помощью разрыва и стилей страниц можно изменить нумерацию следующей
+страницы, например, за 3-й страницей сразу может следовать 8-я. Для
+этого также используется диалог вставки разрыва.</p>
+<div class="figure align-center">
+<img alt="" src="/home/dmitry/Docs/LibreRussia/librerussia.github.io/img/lo_2015-01-19_libreoffice-writer-break/lo_2015-01-19_libreoffice-writer-break.005.png" style="width: 250px;" />
+</div>
+</div>
+<div class="section" id="id6">
+<h3>Удаление разрыва</h3>
+<p>Для удаления разрыва, достаточно установить курсор перед разрывом и
+нажать клавишу <tt class="docutils literal">Backspace</tt> на клавиатуре.</p>
+</div>
+<div class="section" id="id7">
+<h3>И снова о логике</h3>
+<p>Снова хочу порассуждать о логике. Я не устаю твердить о том, что
+интерфейс LibreOffice очень логичен. Но иногда логика требует
+определенных знаний.</p>
+<p>Вполне логично пытаться сменить ориентацию страницы с помощью диалога
+<em>«Параметры страницы»</em> (<em>«Формат → Страница»</em>). Но с его помощью нельзя
+добиться желаемого результата, так как он изменяет параметры для всех
+страниц в документе.</p>
+<p>Программы не умеют читать мысли людей. Вполне удобно, что за портретной
+страницей автоматически следует тоже портретная страница. Ведь в
+большинстве случаев отдельный документ оформляется в едином стиле. Было
+бы крайне неудобно каждый раз указывать программе какая страница должна
+следовать. Но даже на этот случай придуман механизм с <em>«Разрывом
+страниц»</em>.</p>
+<p>Однако разрыв страницы является параметром абзаца. Эту логику не все
+могут проследить. Дело в том, что такие программы, как LibreOffice,
+оперирую абзацами. Абзац первичен, без абзаца нет страницы. Ни в
+LibreOffice, ни в МС Офис невозможно создать абсолютно пустую страницу.
+Всегда на новой странице будет находиться мигающий курсор и будет
+автоматически сделана пустая строка. Да, пустая строка это тоже абзац.</p>
+<p>Программы, которые используются для создания полиграфической продукции
+(Scribus, Inkscape, CorelDraw, Illustrator и подобные) наоборот
+оперируют страницами. Для них первична страница, на которой можно
+размещать изображения, текстовые блоки и т.д.</p>
+<p>Поэтому в LibreOffice разрыв страницы является атрибутом абзаца.
+Взгляните на картинку ниже.</p>
+<div class="figure align-center">
+<img alt="" src="/home/dmitry/Docs/LibreRussia/librerussia.github.io/img/lo_2015-01-19_libreoffice-writer-break/lo_2015-01-19_libreoffice-writer-break.006.png" style="width: 350px;" />
+</div>
+<p>Синими метками отмечены абзацы. Делая разрыв страницы, мы как-бы говорим
+программе, что следующий абзац должен начинаться с новой страницы.</p>
+<p>Так что, логика по прежнему присутствует, но для её понимания нужно
+знание базовых основ.</p>
+</div>
+</div>
+<div class="section" id="microsoft-office">
+<h2>Разрывы в Microsoft Office</h2>
+<p>В Microsoft Office разрыв страницы является спецсимволом. Вставляется из
+меню <em>«Вставка → Разрыв»</em> или вставкой спецсимвола с кодом 012.</p>
+<p>В Libre/Open Office разрыв страницы является свойством абзаца.</p>
+<div class="section" id="id8">
+<h3>Дополнительные ссылки</h3>
+<ul class="simple">
+<li><a class="reference external" href="http://librerussia.blogspot.ru/2014/11/LibreOffice-Styles-000.html">Руководство по стилям
+LibreOffice</a></li>
+<li><a class="reference external" href="http://libreoffice.readthedocs.org/ru/latest/Using-Styles-and-Templates.html">Краткое руководство по
+LibreOffice</a></li>
+<li><a class="reference external" href="https://help.libreoffice.org/Writer/Inserting_and_Deleting_Page_Breaks/ru">Справка LibreOffice: Вставка и удаление разрывов
+страниц</a></li>
+</ul>
+</div>
+</div>
+	
+
+	</article>
+
+    <p>
+<script type="text/javascript" src="//yastatic.net/share/share.js" charset="utf-8"></script><div class="yashare-auto-init" data-yashareL10n="ru" data-yashareType="small" data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,moimir,gplus" data-yashareTheme="counter"></div>
+	</p>
+
+
+		  </div>	
+		  
+		  <div class="sidebar">
+
+	        <nav>
+	          <h2>Категории</h2>
+	          <ul>
+	              <li class="active"><a href="/category/libreoffice.html">LibreOffice</a></li>
+	              <li ><a href="/category/python.html">Python</a></li>
+	              <li ><a href="/category/razmetka.html">Разметка</a></li>
+	          </ul>
+	        </nav>
+
+
+
+		  </div>
+
+	  </div>
+
+      <footer>
+		<p role="contentinfo">
+		  © 2013 Dmitry Mazhartsev - Proudly powered by <a href="http://alexis.notmyidea.org/pelican/">pelican</a>. Theme <a href="https://github.com/fle/pelican-simplegrey">pelican-simplegrey</a>.
+    	</p>
+
+	  </footer>	
+
+	</div>
+	
+
+</body>
+</html>

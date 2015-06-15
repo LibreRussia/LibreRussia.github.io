@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="">	
+<head>
+	<meta charset="utf-8"/>
+	<title>LibreOffice: Включение/Выключение отображения изображений в документе - Блог про LibreOffice</title>	
+	<meta name="author" content="Dmitry Mazhartsev">
+	
+
+	<meta name="description" content="LibreOffice: Включение/Выключение отображения изображений в документе Придумал этот трюк когда делал верстку в один столбец книги «Gimp для фотографа: эффективные методы обработки». Технические руководства содержат большое количество изображений, что в конечном итоге сказывается на скорости отрисовки документа. В параметрах LibreOffice есть маркер, который позволяет выключить отображение изображений. На месте ...">
+
+
+	<link rel="top" href="#" /><link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,300italic,400italic,600italic|Source+Code+Pro' rel='stylesheet' type='text/css'></link>
+	<link rel="stylesheet" href="/theme/css/main.css" type="text/css" />
+		
+
+</head>
+	
+<body>
+
+    <div class="container">
+	  
+	  <header role="banner">
+	    <div class="feeds">
+	    </div>
+		<a href="" class="title">Блог про LibreOffice</a>
+      </header>
+	
+	  <div class="wrapper">
+
+		  <div role="main" class="content">
+	<article class="full">
+			
+		<h1>LibreOffice: Включение/Выключение отображения изображений в документе</h1>
+		
+<div class="metadata">
+  <time datetime="2015-01-21T00:00:00+01:00" pubdate>Ср. 21 Январь 2015</time>
+    <address class="vcard author">
+      by <a class="url fn" href="/author/dmitry-mazhartsev.html">Dmitry Mazhartsev</a>
+    </address>
+  in <a href="/category/libreoffice.html">LibreOffice</a>
+<p class="tags">tagged <a href="/tag/libreoffice.html">LibreOffice</a>, <a href="/tag/writer.html">Writer</a>, <a href="/tag/android.html">Android</a>, <a href="/tag/calc.html">Calc</a>, <a href="/tag/draw.html">Draw</a>, <a href="/tag/impress.html">Impress</a>, <a href="/tag/math.html">Math</a>, <a href="/tag/base.html">Base</a></p></div>		
+		<div class="section" id="libreoffice">
+<h2>LibreOffice: Включение/Выключение отображения изображений в документе</h2>
+<p>Придумал этот трюк когда делал верстку в один столбец книги <a class="reference external" href="http://photoliving.com.ua/books">«Gimp для
+фотографа: эффективные методы
+обработки»</a>.</p>
+<p>Технические руководства содержат большое количество изображений, что в
+конечном итоге сказывается на скорости отрисовки документа. В параметрах
+LibreOffice есть маркер, который позволяет выключить отображение
+изображений. На месте изображений остаются лишь серые рамки,
+обозначающие их размеры.</p>
+<p>Эти изображения никуда не деваются, при печати и экспорте они также
+отображаются, но при работе с документом они просто не отрисовываются.
+Это значительно снижает нагрузку на компьютер.</p>
+<div class="figure align-center">
+<img alt="" src="/home/dmitry/Docs/LibreRussia/librerussia.github.io/img/lo_2015-01-21_vkl-vikl-izobrazhenii/lo_2015-01-21_vkl-vikl-izobrazhenii.001.png" style="width: 350px;" />
+</div>
+<p>Но есть одна проблема. Данный маркер запрятан далеко в настройках. Он
+находится в <em>«Сервис → Параметры → LibreOffice Writer → Вид»</em> в разделе
+<em>«Показать»</em> маркер <em>«Изображения и внедренные объекты»</em>. И каждый раз
+лазить туда не очень удобно.</p>
+<p>Не знаю, почему разработчики не поместят его в меню <em>«Вид»</em> по
+умолчанию. По-моему, очень полезная функция.</p>
+<p>К счастью, мы можем сделать это сами и никаких особых навыков не
+требуется. Мы сделаем и пункт в меню <em>Вид</em>, и выведем иконку на панель
+инструментов и даже назначим сочетание клавиш.</p>
+<p>Для этого в Writer откроем диалог <em>«Настройка»</em> (<em>«Сервис →
+Настройка»</em>).</p>
+<p>Чтобы сделать значок на панели инструментов, перейдем на вкладку
+<em>«Панели инструментов»</em> и:</p>
+<div class="figure align-center">
+<img alt="" src="/home/dmitry/Docs/LibreRussia/librerussia.github.io/img/lo_2015-01-21_vkl-vikl-izobrazhenii/lo_2015-01-21_vkl-vikl-izobrazhenii.002.png" style="width: 350px;" />
+</div>
+<ol class="arabic simple">
+<li>В списке <em>Панель инструментов</em> выбираем нужную панель <em>Стандартная</em>
+(можно выбрать любую);</li>
+<li>Нажимаем кнопку <em>Добавить</em>;</li>
+</ol>
+<div class="figure align-center">
+<img alt="" src="/home/dmitry/Docs/LibreRussia/librerussia.github.io/img/lo_2015-01-21_vkl-vikl-izobrazhenii/lo_2015-01-21_vkl-vikl-izobrazhenii.003.png" style="width: 350px;" />
+</div>
+<ol class="arabic simple">
+<li>В разделе <em>Категории</em> выбираем <em>Вид</em>;</li>
+<li>В разделе <em>Команды</em> выбираем <em>Изображения вкл/выкл</em>;</li>
+<li>С помощью стрелок выбираем удобную позицию для кнопки;</li>
+<li>Жмем <em>Ок</em>.</li>
+</ol>
+<p>Теперь на стандартной панели инструментов появился значок включения и
+выключения отображения изображений.</p>
+<p>Чтобы добавить пункт в меню снова идем в диалог <em>«Настройка»</em> (<em>«Сервис
+→ Настройка»</em>) на вкладку <em>Меню</em>.</p>
+<div class="figure align-center">
+<img alt="" src="/home/dmitry/Docs/LibreRussia/librerussia.github.io/img/lo_2015-01-21_vkl-vikl-izobrazhenii/lo_2015-01-21_vkl-vikl-izobrazhenii.004.png" style="width: 350px;" />
+</div>
+<ol class="arabic simple">
+<li>В списке <em>Меню</em> выбираем <em>Вид</em>;</li>
+<li>Нажимаем кнопку <em>Добавить</em>;</li>
+<li>В разделе <em>Категории</em> выбираем <em>Вид</em>;</li>
+<li>В разделе <em>Команды</em> выбираем <em>Изображения вкл/выкл</em>;</li>
+<li>С помощью стрелок выбираем удобную позицию для пункта;</li>
+<li>Жмем <em>Ок</em>.</li>
+</ol>
+<p>Ну и напоследок назначим ещё и сочетание клавиш для этой функции. Снова
+идем в диалог <em>«Настройка»</em> (<em>«Сервис → Настройка»</em>) на вкладку
+<em>Клавиатура</em>.</p>
+<div class="figure align-center">
+<img alt="" src="/home/dmitry/Docs/LibreRussia/librerussia.github.io/img/lo_2015-01-21_vkl-vikl-izobrazhenii/lo_2015-01-21_vkl-vikl-izobrazhenii.005.png" style="width: 350px;" />
+</div>
+<ol class="arabic simple">
+<li>В разделе <em>Комбинации клавиш</em> выбираем свободное сочетание клавиш. Я
+выбрал <tt class="docutils literal">Ctrl + G</tt> (Г - графика, легко запомнить).</li>
+<li>В разделе <em>Категории</em> выбираем <em>Вид</em>;</li>
+<li>В разделе <em>Команды</em> выбираем <em>Изображения вкл/выкл</em>;</li>
+<li>Жмем кнопку <em>Назначить</em>.</li>
+</ol>
+<p>Вот так легко и просто можно настроить интерфейс под свои задачи.</p>
+<div class="figure align-center">
+<img alt="" src="/home/dmitry/Docs/LibreRussia/librerussia.github.io/img/lo_2015-01-21_vkl-vikl-izobrazhenii/lo_2015-01-21_vkl-vikl-izobrazhenii.006.png" style="width: 350px;" />
+</div>
+<div class="section" id="id1">
+<h3>Ещё одна хитрость</h3>
+<p>Можно не отключать изображения. Иногда достаточно в «Сервис → Параметры
+→ LibreOffice → Память» выделить больше памяти в разделе «Кэш для
+графики».</p>
+<div class="figure align-center">
+<img alt="" src="/home/dmitry/Docs/LibreRussia/librerussia.github.io/img/lo_2015-01-21_vkl-vikl-izobrazhenii/lo_2015-01-21_vkl-vikl-izobrazhenii.007.png" style="width: 350px;" />
+</div>
+</div>
+<div class="section" id="id2">
+<h3>Ссылки</h3>
+<ul class="simple">
+<li><a class="reference external" href="http://libreoffice.readthedocs.org/ru/latest/Customizing-LibreOffice.html">Краткое руководство по LibreOffice: Глава 14 – Дополнительная
+настройка</a></li>
+<li><a class="reference external" href="http://libreoffice.readthedocs.org/ru/latest/Setting-up-LibreOffice.html">Краткое руководство по LibreOffice: Глава 2 – Общие параметры
+LibreOffice</a></li>
+</ul>
+</div>
+</div>
+	
+
+	</article>
+
+    <p>
+<script type="text/javascript" src="//yastatic.net/share/share.js" charset="utf-8"></script><div class="yashare-auto-init" data-yashareL10n="ru" data-yashareType="small" data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,moimir,gplus" data-yashareTheme="counter"></div>
+	</p>
+
+
+		  </div>	
+		  
+		  <div class="sidebar">
+
+	        <nav>
+	          <h2>Категории</h2>
+	          <ul>
+	              <li class="active"><a href="/category/libreoffice.html">LibreOffice</a></li>
+	              <li ><a href="/category/python.html">Python</a></li>
+	              <li ><a href="/category/razmetka.html">Разметка</a></li>
+	          </ul>
+	        </nav>
+
+
+
+		  </div>
+
+	  </div>
+
+      <footer>
+		<p role="contentinfo">
+		  © 2013 Dmitry Mazhartsev - Proudly powered by <a href="http://alexis.notmyidea.org/pelican/">pelican</a>. Theme <a href="https://github.com/fle/pelican-simplegrey">pelican-simplegrey</a>.
+    	</p>
+
+	  </footer>	
+
+	</div>
+	
+
+</body>
+</html>

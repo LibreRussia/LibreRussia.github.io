@@ -56,11 +56,17 @@
   <span class="n">command</span> <span class="o">=</span> <span class="s">&#39;pandoc --from={0} --to={1} --output={2} {3}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fr_format</span><span class="p">,</span> <span class="n">to_format</span><span class="p">,</span> <span class="n">out_file</span><span class="p">,</span> <span class="nb">file</span><span class="p">)</span>
   <span class="n">os</span><span class="o">.</span><span class="n">popen</span><span class="p">(</span><span class="n">command</span><span class="p">)</span>
 </pre></div>
+<p>Или с помощью модуля <tt class="docutils literal">pypandoc</tt>:</p>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">pypandoc</span>
+
+<span class="n">output</span> <span class="o">=</span> <span class="n">pypandoc</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="s">&#39;somefile.html&#39;</span><span class="p">,</span> <span class="s">&#39;rst&#39;</span><span class="p">,</span> <span class="n">outputfile</span><span class="o">=</span><span class="s">&quot;somefile.rst&quot;</span><span class="p">)</span>
+</pre></div>
 <div class="section" id="id1">
 <h2>Ссылки</h2>
 <ul class="simple">
 <li><a class="reference external" href="http://www.johnpaulett.com/2009/10/15/html-to-restructured-text-in-python-using-pandoc/">HTML to reStructuredText in Python using Pandoc</a></li>
 <li><a class="reference external" href="http://pandoc.org/try/">Try pandoc!</a></li>
+<li><a class="reference external" href="https://pypi.python.org/pypi/pypandoc/">pypandoc 0.9.8</a></li>
 </ul>
 </div>
 	

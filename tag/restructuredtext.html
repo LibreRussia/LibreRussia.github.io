@@ -71,14 +71,14 @@
 <p>Конвертация reStructuredText в Markdown:</p>
 <div class="highlight"><pre>pandoc --from<span class="o">=</span>rst --to<span class="o">=</span>markdown --output<span class="o">=</span>README.md README.rst
 </pre></div>
-<div class="section" id="id1">
-<h2>Ссылки</h2>
-<ul class="simple">
-<li><a class="reference external" href="http://bfroehle.com/2013/04/26/converting-md-to-rst/">Converting Markdown to reStructuredText</a></li>
-<li><a class="reference external" href="http://pandoc.org/try/">Try pandoc!</a></li>
-</ul>
-</div>
-</p>
+<p><strong>Автоматизация с помощью Python</strong></p>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="n">fr_format</span> <span class="o">=</span> <span class="s">&#39;md&#39;</span>     <span class="c"># Из какого формата</span>
+<span class="n">to_format</span> <span class="o">=</span> <span class="s">&#39;rst&#39;</span>      <span class="c"># В какой формат</span>
+
+<span class="k">def</span> <span class="nf">convert</span><span class="p">(</span><span class="n">fr_format</span><span class="p">,</span> <span class="n">to_format</span><span class="p">,</span> <span class="nb">file</span><span class="p">):</span>
+  <span class="n">out_file ...</span></pre></div></p>
   </div>
 </article><article class="summary">
 <div class="metadata">
