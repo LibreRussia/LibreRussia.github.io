@@ -3,9 +3,6 @@
 :category: LibreOffice
 :tags: LibreOffice, Writer, Android, Calc, Draw, Impress, Math, Base
 
-Доступно приложение LibreOffice Viewer (Beta) для Android
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 The Document Foundation (TDF) официально анонсировал бета-версию
 приложения LibreOffice Viewer, позволяющего просматривать файлы в
 формате Open Document Format (ODF) на мобильных устройствах на платформе
